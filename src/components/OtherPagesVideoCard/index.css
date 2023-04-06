@@ -1,0 +1,19 @@
+.trending-page-list-item {
+  width: 100%;
+  padding: 20px 14px 30px 14px;
+}
+
+.trending-video-link-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 576px) {
+  .trending-route-dot {
+    display: none;
+  }
+}

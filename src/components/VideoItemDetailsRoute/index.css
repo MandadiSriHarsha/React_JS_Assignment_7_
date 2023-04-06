@@ -1,0 +1,15 @@
+.video-player {
+  height: 200px;
+}
+
+@media screen and (min-width: 576px) {
+  .video-player {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .video-player {
+    height: 500px;
+  }
+}

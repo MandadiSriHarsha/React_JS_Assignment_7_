@@ -1,0 +1,27 @@
+.home-card-link-item {
+  width: 90%;
+  margin: 0px 20px 40px 20px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  max-height: 450px;
+}
+
+@media screen and (min-width: 576px) {
+  .home-card-link-item {
+    width: 42%;
+    max-width: 380px;
+    margin: 0px 12px 40px 12px;
+  }
+}
+
+.video-link-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  outline: none;
+}

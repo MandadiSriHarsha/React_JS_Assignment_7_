@@ -1,0 +1,8 @@
+.game-page-link-item {
+  width: 40%;
+  max-width: 250px;
+  text-decoration: none;
+  margin: 15px 15px 15px 15px;
+  cursor: pointer;
+  outline: none;
+}

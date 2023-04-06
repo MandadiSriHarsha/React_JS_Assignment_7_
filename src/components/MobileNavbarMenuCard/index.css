@@ -1,0 +1,8 @@
+.mobile-nav-link-item {
+  border-radius: 10px;
+  margin: 0px 0px 10px 0px;
+  padding: 12px 0px 12px 12px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
