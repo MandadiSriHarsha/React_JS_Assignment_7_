@@ -1,4 +1,4 @@
-import {Link, useLocation} from 'react-router-dom'
+import {Link, useLocation, withRouter} from 'react-router-dom'
 
 import {AiFillHome} from 'react-icons/ai'
 
@@ -30,14 +30,13 @@ import {
 
 import './index.css'
 
-function GetDesktopLocation() {
+const AppSidebar = props => {
   const location = useLocation()
-  return location
-}
-
-const AppSidebar = () => {
-  const location = GetDesktopLocation()
   const path = location.pathname
+
+  const {match} = props
+  const {params} = match
+  const {id} = params
 
   return (
     <NxtWatchAppContext.Consumer>
@@ -53,13 +52,13 @@ const AppSidebar = () => {
                   backgroundColor: (() => {
                     let backgroundColor = null
                     if (isDarkModeEnabled === true) {
-                      if (path === '/') {
+                      if (path === '/' || path === `/videos/${id}`) {
                         backgroundColor = '#424242'
                       } else {
                         backgroundColor = 'none'
                       }
                     } else if (isDarkModeEnabled === false) {
-                      if (path === '/') {
+                      if (path === '/' || path === `/videos/${id}`) {
                         backgroundColor = '#ebebeb'
                       } else {
                         backgroundColor = 'none'
@@ -72,12 +71,12 @@ const AppSidebar = () => {
               >
                 <SidebarHomeItem
                   isDarkModeEnabled={isDarkModeEnabled}
-                  isPathActive={path === '/'}
+                  isPathActive={path === '/' || path === `/videos/${id}`}
                 >
                   <AiFillHome />
                   <SidebarHomeItemText
                     isDarkModeEnabled={isDarkModeEnabled}
-                    isPathActive={path === '/'}
+                    isPathActive={path === '/' || path === `/videos/${id}`}
                   >
                     Home
                   </SidebarHomeItemText>
@@ -250,4 +249,4 @@ const AppSidebar = () => {
   )
 }
 
-export default AppSidebar
+export default withRouter(AppSidebar)
