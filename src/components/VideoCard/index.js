@@ -27,8 +27,8 @@ const VideoCard = props => {
   const newDate = formatDistanceToNow(
     new Date(date.getFullYear(), date.getMonth(), date.getDate()),
   )
-  const array = newDate.split('')
-  const year = array.filter(eachitem => parseInt(eachitem))
+  const array = newDate.split('').map(eachitem=>parseInt(eachitem))
+  const year = array.filter(eachitem => typeof(eachitem)==="number")
   return (
     <NxtWatchAppContext.Consumer>
       {value => {
