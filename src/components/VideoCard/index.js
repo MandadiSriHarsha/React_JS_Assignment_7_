@@ -27,8 +27,7 @@ const VideoCard = props => {
   const newDate = formatDistanceToNow(
     new Date(date.getFullYear(), date.getMonth(), date.getDate()),
   )
-  const array = newDate.split('').map(eachitem=>parseInt(eachitem))
-  const year = array.filter(eachitem => typeof(eachitem)==="number")
+  const array = newDate.split(' ')
   return (
     <NxtWatchAppContext.Consumer>
       {value => {
@@ -59,7 +58,7 @@ const VideoCard = props => {
                     >
                       <ViewCount>{data.viewCount} views</ViewCount>
                       <GoPrimitiveDot />
-                      <PublishedDate>{year[0]} years ago</PublishedDate>
+                      <PublishedDate>{array[1]} years ago</PublishedDate>
                     </VideoExtraDetailsCard>
                   </ChannelContentCard>
                 </VideoCardDetailsCard>
