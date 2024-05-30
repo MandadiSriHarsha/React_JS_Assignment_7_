@@ -226,16 +226,16 @@ export const DesktopNavbarLogoutButton = styled.button`
   margin: 0px 25px 0px 0px;
   font-family: 'Roboto';
   border: ${props =>
-    props.isDarkModeEnabled ? '2px solid #ffffff' : '2px solid #3b82f6'};
+    props.isDarkModeEnabled ? '2px solid #ffffff' : '2px solid #ff0000'};
   cursor: pointer;
   outline: none;
   font-size: 16px;
   font-weight: 500;
-  color: ${props => (props.isDarkModeEnabled ? '#ffffff' : '#3b82f6')};
+  color: ${props => (props.isDarkModeEnabled ? '#ffffff' : '#ff0000')};
   border-radius: 6px;
   &:hover {
     background-color: ${props =>
-      props.isDarkModeEnabled ? '#ffffff' : '#3b82f6'};
+      props.isDarkModeEnabled ? '#ffffff' : '#ff0000'};
     color: ${props => (props.isDarkModeEnabled ? '#000000' : '#ffffff')};
   }
 `

@@ -51,22 +51,19 @@ import {
 
 import './index.css'
 
-const videoItemDetailsRouteApiConstants = {
-  isLoading: 'LOADING',
-  isSuccess: 'SUCCESS',
-  isFailure: 'FAILURE',
-}
-
-const controlsValue = true
-
 class VideoItemDetailsRoute extends Component {
   state = {
     videoDetails: {},
-    videoDetailsPageStatus: 'INITIAL',
+    videoDetailsPageStatus: 'LOADING',
   }
 
   componentDidMount() {
-    this.getVideoItemDetails()
+    this.setState(
+      {
+        videoDetailsPageStatus: 'LOADING',
+      },
+      this.getVideoItemDetails,
+    )
   }
 
   getUpdatedDate = publishedAt => {
@@ -79,9 +76,6 @@ class VideoItemDetailsRoute extends Component {
   }
 
   getVideoItemDetails = async () => {
-    this.setState({
-      videoDetailsPageStatus: videoItemDetailsRouteApiConstants.isLoading,
-    })
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -112,11 +106,11 @@ class VideoItemDetailsRoute extends Component {
       }
       this.setState({
         videoDetails: updatedVideoDetails,
-        videoDetailsPageStatus: videoItemDetailsRouteApiConstants.isSuccess,
+        videoDetailsPageStatus: 'SUCCESS',
       })
     } else {
       this.setState({
-        videoDetailsPageStatus: videoItemDetailsRouteApiConstants.isFailure,
+        videoDetailsPageStatus: 'FAILURE',
       })
     }
   }
@@ -243,7 +237,7 @@ class VideoItemDetailsRoute extends Component {
                   url={videoDetails.videoUrl}
                   width="100%"
                   className="video-player"
-                  controls={controlsValue}
+                  controls
                 />
               </VideoContainer>
               <VideoTitle isDarkModeEnabled={isDarkModeEnabled}>
@@ -342,11 +336,11 @@ class VideoItemDetailsRoute extends Component {
   getVideoCard = () => {
     const {videoDetailsPageStatus} = this.state
     switch (videoDetailsPageStatus) {
-      case videoItemDetailsRouteApiConstants.isLoading:
+      case 'LOADING':
         return <LoaderCard />
-      case videoItemDetailsRouteApiConstants.isSuccess:
+      case 'SUCCESS':
         return this.videoItemDetailsSuccessCard()
-      case videoItemDetailsRouteApiConstants.isFailure:
+      case 'FAILURE':
         return this.videoItemDetailsFailureCard()
       default:
         return null

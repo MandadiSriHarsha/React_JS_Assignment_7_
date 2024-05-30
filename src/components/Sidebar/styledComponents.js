@@ -4,13 +4,13 @@ export const Sidebar = styled.nav`
   height: 90vh;
   max-height: 100vh;
   width: 25%;
-  max-width: 230px;
+  max-width: 240px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 25px 20px 25px;
+  padding: 50px 15px 20px 15px;
   background-color: ${props =>
     props.isDarkModeEnabled ? ' #212121' : '#ffffff'};
   display: none;

@@ -197,6 +197,9 @@ export const VideoDetailsLikeCard = styled.button`
   @media screen and (min-width: 768px) {
     font-size: 18px;
   }
+  &:hover {
+    color: #2563eb;
+  }
 `
 
 export const VideoDetailsDislikeCard = styled.button`
@@ -234,6 +237,9 @@ export const VideoDetailsDislikeCard = styled.button`
   @media screen and (min-width: 768px) {
     font-size: 18px;
   }
+  &:hover {
+    color: #2563eb;
+  }
 `
 
 export const VideoDetailsSavedCard = styled.button`
@@ -270,6 +276,9 @@ export const VideoDetailsSavedCard = styled.button`
   margin: 0px 15px 0px 0px;
   @media screen and (min-width: 768px) {
     font-size: 18px;
+  }
+  &:hover {
+    color: #2563eb;
   }
 `
 

@@ -11,10 +11,16 @@ export const NxtWatchPremiumCardBgContainer = styled.div`
   align-items: flex-start;
   @media screen and (max-width: 767px) {
     border-top: none;
+    border-left: none;
+    border-right: none;
   }
   border-bottom: ${props =>
     props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
+  border-left: ${props =>
+    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
   border-top: ${props =>
+    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
+  border-right: ${props =>
     props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
 `
 

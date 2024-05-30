@@ -69,6 +69,23 @@ const AppSidebar = props => {
                     }
                     return backgroundColor
                   })(),
+                  border: (() => {
+                    let style = null
+                    if (isDarkModeEnabled === true) {
+                      if (path === '/' || path === `/videos/${id}`) {
+                        style = '2px solid #8b8b8c'
+                      } else {
+                        style = 'none'
+                      }
+                    } else if (isDarkModeEnabled === false) {
+                      if (path === '/' || path === `/videos/${id}`) {
+                        style = '2px solid lightgray'
+                      } else {
+                        style = 'none'
+                      }
+                    }
+                    return style
+                  })(),
                 }}
                 className={`sidebar-menu-link-item ${hoverClass}`}
               >
@@ -105,6 +122,23 @@ const AppSidebar = props => {
                       }
                     }
                     return backgroundColor
+                  })(),
+                  border: (() => {
+                    let style = null
+                    if (isDarkModeEnabled === true) {
+                      if (path === '/trending' || path === '/trending') {
+                        style = '2px solid #8b8b8c'
+                      } else {
+                        style = 'none'
+                      }
+                    } else if (isDarkModeEnabled === false) {
+                      if (path === '/trending' || path === '/trending') {
+                        style = '2px solid lightgray'
+                      } else {
+                        style = 'none'
+                      }
+                    }
+                    return style
                   })(),
                 }}
                 className={`sidebar-menu-link-item ${hoverClass}`}
@@ -143,6 +177,23 @@ const AppSidebar = props => {
                     }
                     return backgroundColor
                   })(),
+                  border: (() => {
+                    let style = null
+                    if (isDarkModeEnabled === true) {
+                      if (path === '/gaming' || path === '/gaming') {
+                        style = '2px solid #8b8b8c'
+                      } else {
+                        style = 'none'
+                      }
+                    } else if (isDarkModeEnabled === false) {
+                      if (path === '/gaming' || path === '/gaming') {
+                        style = '2px solid lightgray'
+                      } else {
+                        style = 'none'
+                      }
+                    }
+                    return style
+                  })(),
                 }}
                 className={`sidebar-menu-link-item ${hoverClass}`}
               >
@@ -179,6 +230,29 @@ const AppSidebar = props => {
                       }
                     }
                     return backgroundColor
+                  })(),
+                  border: (() => {
+                    let style = null
+                    if (isDarkModeEnabled === true) {
+                      if (
+                        path === '/saved-videos' ||
+                        path === '/saved-videos'
+                      ) {
+                        style = '2px solid #8b8b8c'
+                      } else {
+                        style = 'none'
+                      }
+                    } else if (isDarkModeEnabled === false) {
+                      if (
+                        path === '/saved-videos' ||
+                        path === '/saved-videos'
+                      ) {
+                        style = '2px solid lightgray'
+                      } else {
+                        style = 'none'
+                      }
+                    }
+                    return style
                   })(),
                 }}
                 className={`sidebar-menu-link-item ${hoverClass}`}

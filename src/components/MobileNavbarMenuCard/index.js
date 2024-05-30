@@ -1,4 +1,4 @@
-import {NavLink, useLocation} from 'react-router-dom'
+import {withRouter, Link, useLocation} from 'react-router-dom'
 
 import {AiFillHome} from 'react-icons/ai'
 
@@ -32,22 +32,26 @@ const MobileNavbarMenuCard = props => {
   const location = GetMobileLocation()
   const path = location.pathname
 
+  const {match} = props
+  const {params} = match
+  const {id} = params
+
   return (
     <MobileNavbarMenuCardList>
-      <NavLink
+      <Link
         to="/"
         style={{
           textDecoration: 'none',
           backgroundColor: (() => {
             let backgroundColor = null
             if (isDarkModeEnabled === true) {
-              if (path === '/') {
+              if (path === '/' || path === `/videos/${id}`) {
                 backgroundColor = '#424242'
               } else {
                 backgroundColor = 'none'
               }
             } else if (isDarkModeEnabled === false) {
-              if (path === '/') {
+              if (path === '/' || path === `/videos/${id}`) {
                 backgroundColor = '#ebebeb'
               } else {
                 backgroundColor = 'none'
@@ -55,23 +59,40 @@ const MobileNavbarMenuCard = props => {
             }
             return backgroundColor
           })(),
+          border: (() => {
+            let style = null
+            if (isDarkModeEnabled === true) {
+              if (path === '/' || path === `/videos/${id}`) {
+                style = '2px solid #8b8b8c'
+              } else {
+                style = 'none'
+              }
+            } else if (isDarkModeEnabled === false) {
+              if (path === '/' || path === `/videos/${id}`) {
+                style = '2px solid lightgray'
+              } else {
+                style = 'none'
+              }
+            }
+            return style
+          })(),
         }}
         className="mobile-nav-link-item"
       >
         <NavbarMobileHomeMenuItem
           isDarkModeEnabled={isDarkModeEnabled}
-          isPathActive={path === '/'}
+          isPathActive={path === '/' || path === `/videos/${id}`}
         >
           <AiFillHome />
           <NavbarMobileHomeMenuText
             isDarkModeEnabled={isDarkModeEnabled}
-            isPathActive={path === '/'}
+            isPathActive={path === '/' || path === `/videos/${id}`}
           >
             Home
           </NavbarMobileHomeMenuText>
         </NavbarMobileHomeMenuItem>
-      </NavLink>
-      <NavLink
+      </Link>
+      <Link
         to="/trending"
         style={{
           textDecoration: 'none',
@@ -92,6 +113,23 @@ const MobileNavbarMenuCard = props => {
             }
             return backgroundColor
           })(),
+          border: (() => {
+            let style = null
+            if (isDarkModeEnabled === true) {
+              if (path === '/trending' || path === '/trending') {
+                style = '2px solid #8b8b8c'
+              } else {
+                style = 'none'
+              }
+            } else if (isDarkModeEnabled === false) {
+              if (path === '/trending' || path === '/trending') {
+                style = '2px solid lightgray'
+              } else {
+                style = 'none'
+              }
+            }
+            return style
+          })(),
         }}
         className="mobile-nav-link-item"
       >
@@ -107,8 +145,8 @@ const MobileNavbarMenuCard = props => {
             Trending
           </NavbarMobileTrendingMenuText>
         </NavbarMobileTrendingMenuItem>
-      </NavLink>
-      <NavLink
+      </Link>
+      <Link
         to="/gaming"
         style={{
           textDecoration: 'none',
@@ -129,6 +167,23 @@ const MobileNavbarMenuCard = props => {
             }
             return backgroundColor
           })(),
+          border: (() => {
+            let style = null
+            if (isDarkModeEnabled === true) {
+              if (path === '/gaming' || path === '/gaming') {
+                style = '2px solid #8b8b8c'
+              } else {
+                style = 'none'
+              }
+            } else if (isDarkModeEnabled === false) {
+              if (path === '/gaming' || path === '/gaming') {
+                style = '2px solid lightgray'
+              } else {
+                style = 'none'
+              }
+            }
+            return style
+          })(),
         }}
         className="mobile-nav-link-item"
       >
@@ -144,8 +199,8 @@ const MobileNavbarMenuCard = props => {
             Gaming
           </NavbarMobileGamingMenuText>
         </NavbarMobileGamingMenuItem>
-      </NavLink>
-      <NavLink
+      </Link>
+      <Link
         to="/saved-videos"
         style={{
           textDecoration: 'none',
@@ -166,6 +221,23 @@ const MobileNavbarMenuCard = props => {
             }
             return backgroundColor
           })(),
+          border: (() => {
+            let style = null
+            if (isDarkModeEnabled === true) {
+              if (path === '/saved-videos' || path === '/saved-videos') {
+                style = '2px solid #8b8b8c'
+              } else {
+                style = 'none'
+              }
+            } else if (isDarkModeEnabled === false) {
+              if (path === '/saved-videos' || path === '/saved-videos') {
+                style = '2px solid lightgray'
+              } else {
+                style = 'none'
+              }
+            }
+            return style
+          })(),
         }}
         className="mobile-nav-link-item"
       >
@@ -181,9 +253,9 @@ const MobileNavbarMenuCard = props => {
             Saved Videos
           </NavbarMobileSavedVideosMenuText>
         </NavbarMobileSavedVideosMenuItem>
-      </NavLink>
+      </Link>
     </MobileNavbarMenuCardList>
   )
 }
 
-export default MobileNavbarMenuCard
+export default withRouter(MobileNavbarMenuCard)
