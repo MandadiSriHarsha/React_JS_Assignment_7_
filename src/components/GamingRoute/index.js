@@ -35,21 +35,14 @@ import {
 
 import './index.css'
 
-const gamingRouteApiConstants = {
-  isLoading: 'LOADING',
-  isSuccess: 'SUCCESS',
-  isFailure: 'FAILURE',
-}
-
 class GamingRoute extends Component {
-  state = {gamingRouteVideosList: [], gamePageStatus: 'INITIAL'}
+  state = {gamingRouteVideosList: [], gamePageStatus: 'LOADING'}
 
   componentDidMount() {
-    this.getGamingVideosList()
+    this.setState({gamePageStatus: 'LOADING'}, this.getGamingVideosList)
   }
 
   getGamingVideosList = async () => {
-    this.setState({gamePageStatus: gamingRouteApiConstants.isLoading})
     const apiUrl = 'https://apis.ccbp.in/videos/gaming'
     const jwtToken = Cookies.get('jwt_token')
     const options = {
@@ -69,10 +62,10 @@ class GamingRoute extends Component {
       }))
       this.setState({
         gamingRouteVideosList: updatedList,
-        gamePageStatus: gamingRouteApiConstants.isSuccess,
+        gamePageStatus: 'SUCCESS',
       })
     } else {
-      this.setState({gamePageStatus: gamingRouteApiConstants.isFailure})
+      this.setState({gamePageStatus: 'FAILURE'})
     }
   }
 
@@ -147,17 +140,17 @@ class GamingRoute extends Component {
     )
   }
 
-  getGamingRouteContentcard = () => {
+  getGamingRouteContentCard = () => {
     const {gamePageStatus} = this.state
     switch (gamePageStatus) {
-      case gamingRouteApiConstants.isLoading:
+      case 'LOADING':
         return <LoaderCard />
-      case gamingRouteApiConstants.isSuccess:
+      case 'SUCCESS':
         return this.gamePageSuccessCard()
-      case gamingRouteApiConstants.isFailure:
+      case 'FAILURE':
         return this.gamePageErrorCard()
       default:
-        return null
+        return this.gamePageErrorCard()
     }
   }
 
@@ -181,7 +174,7 @@ class GamingRoute extends Component {
                         Gaming
                       </GameRouteHeading>
                     </GameRouteHeaderCard>
-                    {this.getGamingRouteContentcard()}
+                    {this.getGamingRouteContentCard()}
                   </GameRouteDisplayCard>
                 </GameRouteMainCard>
               </GameRouteBgContainer>

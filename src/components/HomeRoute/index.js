@@ -26,22 +26,16 @@ import {
 
 import './index.css'
 
-const homePageApiConstants = {
-  isLoading: 'LOADING',
-  isSuccess: 'SUCCESS',
-  isFailure: 'FAILURE',
-}
-
 class HomeRoute extends Component {
   state = {
     isPremiumCardActive: true,
     searchValue: '',
     homePageVideosList: [],
-    homePageStatus: 'INITIAL',
+    homePageStatus: 'LOADING',
   }
 
   componentDidMount() {
-    this.getHomePageList()
+    this.setState({homePageStatus: 'LOADING'}, this.getHomePageList)
   }
 
   onTogglePremiumCardDisplay = () => {
@@ -59,7 +53,6 @@ class HomeRoute extends Component {
   }
 
   getHomePageList = async () => {
-    this.setState({homePageStatus: homePageApiConstants.isLoading})
     const {searchValue} = this.state
     const apiUrl = `https://apis.ccbp.in/videos/all?search=${searchValue}`
     const jwtToken = Cookies.get('jwt_token')
@@ -85,10 +78,10 @@ class HomeRoute extends Component {
       }))
       this.setState({
         homePageVideosList: updatedList,
-        homePageStatus: homePageApiConstants.isSuccess,
+        homePageStatus: 'SUCCESS',
       })
     } else {
-      this.setState({homePageStatus: homePageApiConstants.isFailure})
+      this.setState({homePageStatus: 'FAILURE'})
     }
   }
 
@@ -192,14 +185,14 @@ class HomeRoute extends Component {
   displayHomePageContentCard = () => {
     const {homePageStatus} = this.state
     switch (homePageStatus) {
-      case homePageApiConstants.isLoading:
+      case 'LOADING':
         return <LoaderCard />
-      case homePageApiConstants.isSuccess:
+      case 'SUCCESS':
         return this.getVideosListCard()
-      case homePageApiConstants.isFailure:
+      case 'FAILURE':
         return this.getHomePageFailureCard()
       default:
-        return null
+        return this.getHomePageFailureCard()
     }
   }
 

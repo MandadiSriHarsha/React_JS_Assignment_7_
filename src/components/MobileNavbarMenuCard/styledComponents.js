@@ -10,6 +10,7 @@ export const MobileNavbarMenuCardList = styled.ul`
   width: 90%;
   margin: auto;
 `
+
 export const NavbarMobileHomeMenuItem = styled.li`
   list-style-type: none;
   display: flex;

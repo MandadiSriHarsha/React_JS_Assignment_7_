@@ -28,23 +28,19 @@ import {
   TrendingPageErrorCardButton,
 } from './styledComponents'
 
-const trendingRouteApiConstants = {
-  isLoading: 'LOADING',
-  isSuccess: 'SUCCESS',
-  isFailure: 'FAILURE',
-}
-
 class TrendingRoute extends Component {
-  state = {trendingRouteVideosList: [], trendingRoutePageStatus: 'INITIAL'}
+  state = {trendingRouteVideosList: [], trendingRoutePageStatus: 'LOADING'}
 
   componentDidMount() {
-    this.getTrendingRouteList()
+    this.setState(
+      {
+        trendingRoutePageStatus: 'LOADING',
+      },
+      this.getTrendingRouteList,
+    )
   }
 
   getTrendingRouteList = async () => {
-    this.setState({
-      trendingRoutePageStatus: trendingRouteApiConstants.isLoading,
-    })
     const apiUrl = 'https://apis.ccbp.in/videos/trending'
     const jwtToken = Cookies.get('jwt_token')
     const options = {
@@ -70,11 +66,11 @@ class TrendingRoute extends Component {
       }))
       this.setState({
         trendingRouteVideosList: updatedList,
-        trendingRoutePageStatus: trendingRouteApiConstants.isSuccess,
+        trendingRoutePageStatus: 'SUCCESS',
       })
     } else {
       this.setState({
-        trendingRoutePageStatus: trendingRouteApiConstants.isFailure,
+        trendingRoutePageStatus: 'SUCCESS',
       })
     }
   }

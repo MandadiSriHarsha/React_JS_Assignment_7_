@@ -74,9 +74,8 @@ class VideoItemDetailsRoute extends Component {
     const newDate = formatDistanceToNow(
       new Date(date.getFullYear(), date.getMonth(), date.getDate()),
     )
-    const array = newDate.split('')
-    const year = array.filter(eachitem => parseInt(eachitem))
-    return year
+    const array = newDate.split(' ')
+    return array[1]
   }
 
   getVideoItemDetails = async () => {

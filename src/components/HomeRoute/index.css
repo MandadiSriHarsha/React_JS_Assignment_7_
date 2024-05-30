@@ -53,6 +53,12 @@
   align-items: center;
 }
 
+.search-button:hover {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
 @media screen and (min-width: 992px) {
   .search-button {
     font-size: 18px;

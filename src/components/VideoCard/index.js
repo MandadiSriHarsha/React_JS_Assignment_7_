@@ -32,8 +32,11 @@ const VideoCard = props => {
     <NxtWatchAppContext.Consumer>
       {value => {
         const {isDarkModeEnabled} = value
+        const hoverEffect = isDarkModeEnabled
+          ? 'dark-mode-hover-effect'
+          : 'light-mode-hover-effect'
         return (
-          <li className="home-card-link-item">
+          <li className={`home-card-link-item ${hoverEffect}`}>
             <Link
               to={`/videos/${data.id}`}
               style={{textDecoration: 'none'}}

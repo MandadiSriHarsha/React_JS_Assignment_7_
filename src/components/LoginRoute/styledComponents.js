@@ -24,7 +24,9 @@ export const LoginForm = styled.form`
   margin: 0px 0px 0px 0px;
   padding: 37px 23px 37px 23px;
   box-shadow: ${props =>
-    props.isDarkModeEnabled ? 'none' : '0px 8px 50px rgba(7, 7, 7, 0.08)'};
+    props.isDarkModeEnabled
+      ? '0px 8px 50px rgba(255, 255, 255, 0.08)'
+      : '0px 8px 50px rgba(7, 7, 7, 0.3)'};
   border-radius: 10px;
   background-color: ${props =>
     props.isDarkModeEnabled ? '#000000' : '#ffffff'};

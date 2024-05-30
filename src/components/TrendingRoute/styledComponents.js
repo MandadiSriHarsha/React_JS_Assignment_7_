@@ -32,7 +32,7 @@ export const TrendingPageDisplayCard = styled.div`
 
 export const TrendingPageHeaderCard = styled.div`
   width: 100%;
-  padding: 20px 0px 20px 25px;
+  padding: 15px 20px 15px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,8 +49,9 @@ export const TrendingPageLogoCard = styled.div`
   border-radius: 100%;
   padding: 9px 13px 7px 13px;
   margin: 0px 15px 0px 0px;
+  border: 2px solid #ff0000;
   @media screen and (min-width: 768px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `
 
@@ -61,7 +62,7 @@ export const TrendingPageHeading = styled.h1`
   font-size: 20px;
   font-weight: 500;
   @media screen and (min-width: 768px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `
 

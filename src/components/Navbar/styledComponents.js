@@ -6,6 +6,7 @@ export const MobileNavbarBgContainer = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid #000000;
   background-color: ${props =>
     props.isDarkModeEnabled ? ' #212121' : '#ffffff'};
   @media screen and (min-width: 767px) {
@@ -135,15 +136,19 @@ export const PopupCancelButton = styled.button`
   @media screen and (min-width: 768px) {
     font-size: 18px;
   }
+  &:hover {
+    background-color: ${props =>
+      props.isDarkModeEnabled ? '#ffffff' : '#000000'};
+    color: ${props => (props.isDarkModeEnabled ? '#000000' : '#ffffff')};
 `
 
 export const PopupLogoutButton = styled.button`
-  color: #ffffff;
+  color: #ff0000;
   font-size: 16px;
   font-weight: 500;
-  border: none;
   margin: 0px 10px 0px 10px;
-  background-color: #4f46e5;
+  border: 2px solid #ff0000;
+  background-color: transparent;
   border-radius: 8px;
   font-family: 'Roboto';
   padding: 9px 17px 9px 17px;
@@ -151,6 +156,10 @@ export const PopupLogoutButton = styled.button`
   outline: none;
   @media screen and (min-width: 768px) {
     font-size: 18px;
+  }
+  &:hover {
+    color: #ffffff;
+    background-color: #ff0000;
   }
 `
 
@@ -224,4 +233,9 @@ export const DesktopNavbarLogoutButton = styled.button`
   font-weight: 500;
   color: ${props => (props.isDarkModeEnabled ? '#ffffff' : '#3b82f6')};
   border-radius: 6px;
+  &:hover {
+    background-color: ${props =>
+      props.isDarkModeEnabled ? '#ffffff' : '#3b82f6'};
+    color: ${props => (props.isDarkModeEnabled ? '#000000' : '#ffffff')};
+  }
 `

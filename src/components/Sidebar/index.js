@@ -42,6 +42,9 @@ const AppSidebar = props => {
     <NxtWatchAppContext.Consumer>
       {value => {
         const {isDarkModeEnabled} = value
+        const hoverClass = isDarkModeEnabled
+          ? 'dark-hover-class'
+          : 'light-hover-class'
         return (
           <Sidebar isDarkModeEnabled={isDarkModeEnabled}>
             <SidebarMenuCard>
@@ -67,7 +70,7 @@ const AppSidebar = props => {
                     return backgroundColor
                   })(),
                 }}
-                className="sidebar-menu-link-item"
+                className={`sidebar-menu-link-item ${hoverClass}`}
               >
                 <SidebarHomeItem
                   isDarkModeEnabled={isDarkModeEnabled}
@@ -104,7 +107,7 @@ const AppSidebar = props => {
                     return backgroundColor
                   })(),
                 }}
-                className="sidebar-menu-link-item"
+                className={`sidebar-menu-link-item ${hoverClass}`}
               >
                 <SidebarTrendingItem
                   isDarkModeEnabled={isDarkModeEnabled}
@@ -141,7 +144,7 @@ const AppSidebar = props => {
                     return backgroundColor
                   })(),
                 }}
-                className="sidebar-menu-link-item"
+                className={`sidebar-menu-link-item ${hoverClass}`}
               >
                 <SidebarGamingItem
                   isDarkModeEnabled={isDarkModeEnabled}
@@ -178,7 +181,7 @@ const AppSidebar = props => {
                     return backgroundColor
                   })(),
                 }}
-                className="sidebar-menu-link-item"
+                className={`sidebar-menu-link-item ${hoverClass}`}
               >
                 <SidebarSavedVideosItem
                   isDarkModeEnabled={isDarkModeEnabled}

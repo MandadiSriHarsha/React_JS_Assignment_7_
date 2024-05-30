@@ -118,7 +118,7 @@ export const NoSavedVideosDescription = styled.p`
 `
 
 export const NoSavedVideosButton = styled.button`
-  padding: 9px 16px 9px 16px;
+  padding: 10px 16px 9px 16px;
   margin: 0px 0px 0px 0px;
   border: none;
   background-color: #4f46e5;

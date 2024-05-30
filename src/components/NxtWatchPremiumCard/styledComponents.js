@@ -9,10 +9,13 @@ export const NxtWatchPremiumCardBgContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media screen and (max-width: 767px) {
+    border-top: none;
+  }
   border-bottom: ${props =>
-    props.isDarkModeEnabled ? '1px solid #f4f4f4' : '1px solid #212121'};
+    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
   border-top: ${props =>
-    props.isDarkModeEnabled ? '1px solid #f4f4f4' : '1px solid #212121'};
+    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
 `
 
 export const NxtWatchPremiumCardHeaderCard = styled.div`
@@ -60,4 +63,8 @@ export const NxtWatchPremiumCardPurchaseButton = styled.button`
   background: transparent;
   border-radius: 5px;
   font-weight: 600;
+  &:hover {
+    background-color: #212121;
+    color: #ffffff;
+  }
 `

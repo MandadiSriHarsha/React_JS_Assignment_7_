@@ -13,6 +13,7 @@ export const VideoThumbnail = styled.img`
   width: 100%;
   border-radius: 4px;
   margin: 0px 0px 10px 0px;
+  max-height: 200px;
 `
 
 export const VideoCardDetailsCard = styled.div`

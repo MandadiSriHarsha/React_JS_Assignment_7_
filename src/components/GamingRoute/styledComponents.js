@@ -35,7 +35,7 @@ export const GameRouteDisplayCard = styled.div`
 
 export const GameRouteHeaderCard = styled.div`
   width: 100%;
-  padding: 20px 0px 20px 25px;
+  padding: 15px 20px 15px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,14 +45,15 @@ export const GameRouteHeaderCard = styled.div`
 
 export const GameRouteLogoCard = styled.div`
   color: #ff0000;
-  font-size: 23px;
+  font-size: 20px;
   background-color: ${props =>
     props.isDarkModeEnabled ? '#000000' : '#f8fafc'};
   border-radius: 100%;
-  padding: 9px 13px 7px 13px;
+  padding: 10px 13px 7px 13px;
   margin: 0px 15px 0px 0px;
-  @media screen and (min-width: 768px) {
-    font-size: 30px;
+  border: 2px solid #ff0000;
+  s @media screen and (min-width: 768px) {
+    font-size: 25px;
   }
 `
 
@@ -60,11 +61,11 @@ export const GameRouteHeading = styled.p`
   color: ${props => (props.isDarkModeEnabled ? '#f8fafc' : '#212121')};
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 500;
   font-family: 'Roboto';
   @media screen and (min-width: 768px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `
 

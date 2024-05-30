@@ -14,3 +14,11 @@
   cursor: pointer;
   outline: none;
 }
+
+.light-hover-class:hover {
+  background-color: #ebebeb;
+}
+
+.dark-hover-class:hover {
+  background-color: #424242;
+}
