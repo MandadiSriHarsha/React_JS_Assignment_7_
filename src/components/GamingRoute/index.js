@@ -109,13 +109,16 @@ class GamingRoute extends Component {
       <NxtWatchAppContext.Consumer>
         {value => {
           const {isDarkModeEnabled} = value
+          const applyGameHoverEffect = isDarkModeEnabled
+            ? 'game-route-dark-hover'
+            : 'game-route-light-hover'
           return (
             <GamePageListCardBgContainer isDarkModeEnabled={isDarkModeEnabled}>
               {gamingRouteVideosList.map(eachitem => (
                 <Link
                   key={eachitem.id}
                   to={`/videos/${eachitem.id}`}
-                  className="game-page-link-item"
+                  className={`game-page-link-item ${applyGameHoverEffect}`}
                 >
                   <GamePageListCard isDarkModeEnabled={isDarkModeEnabled}>
                     <GamePageListCardLogo

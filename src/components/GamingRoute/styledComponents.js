@@ -128,7 +128,8 @@ export const GamePageListCardBgContainer = styled.ul`
   height: 100%;
   width: 100%;
   overflow-y: auto;
-  padding: 0px 0px 30px 0px;
+  padding: 15px 0px 30px 0px;
+  margin: 0px 0px 0px 0px;
   list-style-type: none;
   background-color: ${props =>
     props.isDarkModeEnabled ? '#000000' : '#f8fafc'};

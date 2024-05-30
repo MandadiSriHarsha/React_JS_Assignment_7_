@@ -98,7 +98,7 @@ class VideoItemDetailsRoute extends Component {
         },
         description: data.video_details.description,
         id: data.video_details.id,
-        publishedAt: this.getUpdatedDate(data.video_details.published_at),
+        publishedAt: new Date(data.video_details.published_at),
         thumbnailUrl: data.video_details.thumbnail_url,
         title: data.video_details.title,
         videoUrl: data.video_details.video_url,
@@ -227,7 +227,7 @@ class VideoItemDetailsRoute extends Component {
             }
             return dislikeValue
           }
-          const checkValue = isVideoSavedValue()
+          const saveValue = isVideoSavedValue()
           const likeValue = likeReactionStatus()
           const dislikeValue = dislikeReactionStatus()
           return (
@@ -252,7 +252,7 @@ class VideoItemDetailsRoute extends Component {
                   </VideoDetailsViews>
                   <BsDot color={isDarkModeEnabled ? '#7e858e' : '#606060'} />
                   <VideoDetailsDate isDarkModeEnabled={isDarkModeEnabled}>
-                    {videoDetails.publishedAt} years ago
+                    {this.getUpdatedDate(videoDetails.publishedAt)} years ago
                   </VideoDetailsDate>
                 </VideoDetailsViewsAndDateCard>
                 <VideoDetailsLikeAndDislikeCard
@@ -274,11 +274,11 @@ class VideoItemDetailsRoute extends Component {
                   >
                     <AiOutlineDislike /> Dislike
                   </VideoDetailsDislikeCard>
-                  {checkValue ? (
+                  {saveValue ? (
                     <VideoDetailsSavedCard
                       type="button"
                       onClick={unSaveVideo}
-                      isVideoSaved={checkValue}
+                      isVideoSaved={saveValue}
                       isDarkModeEnabled={isDarkModeEnabled}
                     >
                       <MdPlaylistAdd /> Saved
@@ -287,7 +287,7 @@ class VideoItemDetailsRoute extends Component {
                     <VideoDetailsSavedCard
                       type="button"
                       onClick={saveVideo}
-                      isVideoSaved={checkValue}
+                      isVideoSaved={saveValue}
                       isDarkModeEnabled={isDarkModeEnabled}
                     >
                       <MdPlaylistAdd /> Save

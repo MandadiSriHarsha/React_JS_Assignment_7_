@@ -44,8 +44,9 @@ export const SavedVideosLogoCard = styled.div`
   border-radius: 100%;
   padding: 9px 13px 7px 13px;
   margin: 0px 15px 0px 0px;
+  border: 2px solid #ff0000;
   @media screen and (min-width: 768px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `
 
@@ -57,7 +58,7 @@ export const SavedVideosHeading = styled.h1`
   font-weight: 500;
   font-family: 'Roboto';
   @media screen and (min-width: 768px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `
 

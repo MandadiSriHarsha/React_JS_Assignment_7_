@@ -33,8 +33,11 @@ const OtherPagesVideoCard = props => {
     <NxtWatchAppContext.Consumer>
       {value => {
         const {isDarkModeEnabled} = value
+        const videoHoverEffect = isDarkModeEnabled
+          ? 'video-dark-mode-hover-effect'
+          : 'video-light-mode-hover-effect'
         return (
-          <li className="trending-page-list-item">
+          <li className={`trending-page-list-item ${videoHoverEffect}`}>
             <Link
               to={`/videos/${data.id}`}
               style={{textDecoration: 'none'}}

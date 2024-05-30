@@ -33,6 +33,7 @@ export const TrendingPageDisplayCard = styled.div`
 export const TrendingPageHeaderCard = styled.div`
   width: 100%;
   padding: 15px 20px 15px 20px;
+  margin: 0px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,7 +72,8 @@ export const TrendingPageVideosListCard = styled.ul`
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  padding: 0px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;

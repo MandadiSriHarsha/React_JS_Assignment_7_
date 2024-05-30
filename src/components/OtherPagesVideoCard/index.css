@@ -1,6 +1,13 @@
 .trending-page-list-item {
-  width: 100%;
-  padding: 20px 14px 30px 14px;
+  width: 97%;
+  padding: 25px 14px 40px 14px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .trending-page-list-item {
+    width: 95%;
+  }
 }
 
 .trending-video-link-item {
@@ -16,4 +23,18 @@
   .trending-route-dot {
     display: none;
   }
+}
+
+.video-light-mode-hover-effect:hover {
+  padding: 8px;
+  border: 2px solid #c9c9c9;
+  border-radius: 10px;
+  box-shadow: 0px 8px 50px rgba(7, 7, 7, 0.3);
+}
+
+.video-dark-mode-hover-effect:hover {
+  padding: 8px;
+  border: 2px solid #383838;
+  border-radius: 10px;
+  box-shadow: 0px 8px 50px rgba(252, 249, 249, 0.17);
 }
