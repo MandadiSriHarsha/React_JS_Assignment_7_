@@ -18,6 +18,7 @@ export const VideoThumbnail = styled.img`
 
 export const VideoCardDetailsCard = styled.div`
   width: 100%;
+  height: 100%;
   margin: 0px 0px 0px 0px;
   padding: 13px 0px 0px 0px;
   display: flex;
@@ -40,13 +41,14 @@ export const ChannelContentCard = styled.div`
   align-items: flex-start;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 10px;
+  height: 100%;
 `
 
 export const VideoTitle = styled.p`
   font-size: 14px;
   text-align: left;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 0px 0px;
   color: ${props => (props.isDarkModeEnabled ? '#f1f1f1' : '#424242')};
   @media screen and (min-width: 768px) {
     font-size: 16px;
