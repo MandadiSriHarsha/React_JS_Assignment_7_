@@ -93,7 +93,7 @@ const AppSidebar = props => {
                   isDarkModeEnabled={isDarkModeEnabled}
                   isPathActive={path === '/' || path === `/videos/${id}`}
                 >
-                  <AiFillHome />
+                  <AiFillHome className="sidebar-icon" />
                   <SidebarHomeItemText
                     isDarkModeEnabled={isDarkModeEnabled}
                     isPathActive={path === '/' || path === `/videos/${id}`}
@@ -147,7 +147,7 @@ const AppSidebar = props => {
                   isDarkModeEnabled={isDarkModeEnabled}
                   isPathActive={path === '/trending'}
                 >
-                  <HiFire />
+                  <HiFire className="sidebar-icon" />
                   <SidebarTrendingItemText
                     isDarkModeEnabled={isDarkModeEnabled}
                     isPathActive={path === '/trending'}
@@ -201,7 +201,7 @@ const AppSidebar = props => {
                   isDarkModeEnabled={isDarkModeEnabled}
                   isPathActive={path === '/gaming'}
                 >
-                  <SiYoutubegaming />
+                  <SiYoutubegaming className="sidebar-icon" />
                   <SidebarGamingItemText
                     isDarkModeEnabled={isDarkModeEnabled}
                     isPathActive={path === '/gaming'}
@@ -261,7 +261,7 @@ const AppSidebar = props => {
                   isDarkModeEnabled={isDarkModeEnabled}
                   isPathActive={path === '/saved-videos'}
                 >
-                  <MdPlaylistAdd />
+                  <MdPlaylistAdd className="playlist-icon" />
                   <SidebarSavedVideosItemText
                     isDarkModeEnabled={isDarkModeEnabled}
                     isPathActive={path === '/saved-videos'}
