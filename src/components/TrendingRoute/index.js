@@ -70,7 +70,7 @@ class TrendingRoute extends Component {
       })
     } else {
       this.setState({
-        trendingRoutePageStatus: 'SUCCESS',
+        trendingRoutePageStatus: 'FAILURE',
       })
     }
   }
