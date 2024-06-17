@@ -6,7 +6,8 @@ export const MobileNavbarBgContainer = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #000000;
+  border-bottom: ${props =>
+    props.isDarkModeEnabled ? '2px solid #ff4444' : '2px solid #ff4444'};
   background-color: ${props =>
     props.isDarkModeEnabled ? ' #212121' : '#ffffff'};
   @media screen and (min-width: 767px) {
@@ -96,7 +97,12 @@ export const PopupContentCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: ${props => (props.isDarkModeEnabled ? 'none' : '2px solid #f1f5f9')};
+  border: ${props =>
+    props.isDarkModeEnabled ? `2px solid lightgray` : `2px solid gray`};
+  box-shadow: ${props =>
+    props.isDarkModeEnabled
+      ? `0px 8px 50px rgba(252, 249, 249, 0.17)`
+      : `0px 8px 50px rgba(7, 7, 7, 0.3)`};
 `
 
 export const PopupText = styled.p`

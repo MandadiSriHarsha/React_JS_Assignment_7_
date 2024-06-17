@@ -54,7 +54,7 @@ class LoginRoute extends Component {
   setSuccess = jwtToken => {
     const {history} = this.props
     Cookies.set('jwt_token', jwtToken, {expires: 30})
-    history.replace('/')
+    history.push('/')
   }
 
   onSubmitUserDetails = async event => {

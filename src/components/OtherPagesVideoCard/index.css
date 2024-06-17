@@ -1,12 +1,12 @@
 .trending-page-list-item {
   width: 97%;
-  padding: 25px 14px 40px 14px;
+  padding: 25px 15px 25px 15px;
   margin: auto;
 }
 
 @media screen and (min-width: 768px) {
   .trending-page-list-item {
-    width: 95%;
+    width: 94%;
   }
 }
 
@@ -17,6 +17,8 @@
   justify-content: flex-start;
   cursor: pointer;
   outline: none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 @media screen and (min-width: 576px) {
@@ -26,14 +28,14 @@
 }
 
 .video-light-mode-hover-effect:hover {
-  padding: 8px;
+  padding: 10px;
   border: 2px solid #c9c9c9;
   border-radius: 10px;
   box-shadow: 0px 8px 50px rgba(7, 7, 7, 0.3);
 }
 
 .video-dark-mode-hover-effect:hover {
-  padding: 8px;
+  padding: 10px;
   border: 2px solid #383838;
   border-radius: 10px;
   box-shadow: 0px 8px 50px rgba(252, 249, 249, 0.17);

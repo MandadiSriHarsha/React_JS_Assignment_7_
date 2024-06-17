@@ -49,7 +49,7 @@ export const GameRouteLogoCard = styled.div`
   background-color: ${props =>
     props.isDarkModeEnabled ? '#000000' : '#f8fafc'};
   border-radius: 100%;
-  padding: 10px 13px 7px 13px;
+  padding: 10px 13px 5px 13px;
   margin: 0px 15px 0px 0px;
   border: 2px solid #ff0000;
   s @media screen and (min-width: 768px) {
@@ -128,7 +128,7 @@ export const GamePageListCardBgContainer = styled.ul`
   height: 100%;
   width: 100%;
   overflow-y: auto;
-  padding: 15px 0px 30px 0px;
+  padding: 35px 0px 50px 10px;
   margin: 0px 0px 0px 0px;
   list-style-type: none;
   background-color: ${props =>
@@ -143,19 +143,20 @@ export const GamePageListCardBgContainer = styled.ul`
 export const GamePageListCard = styled.li`
   width: 100%;
   list-style-type: none;
-  padding: 10px 10px 10px 10px;
+  padding: 8px 8px 8px 8px;
 `
 
 export const GamePageListCardLogo = styled.img`
   width: 100%;
   border-radius: 8px;
   margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 `
 
 export const GamePageListCardHeading = styled.h1`
   font-size: 16px;
   margin: 0px 0px 0px 0px;
-  padding: 10px 0px 8px 0px;
+  padding: 8px 0px 8px 0px;
   font-weight: 500;
   font-family: 'Roboto';
   color: ${props => (props.isDarkModeEnabled ? '#ebebeb' : '#231f20')};

@@ -106,6 +106,7 @@ class HomeRoute extends Component {
                   className="search-button"
                   type="button"
                   onClick={this.getHomePageList}
+                  aria-label="Search"
                 >
                   <BsSearch />
                 </button>

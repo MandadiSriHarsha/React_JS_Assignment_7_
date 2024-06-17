@@ -2,20 +2,21 @@
   width: 40%;
   max-width: 250px;
   text-decoration: none;
-  margin: 15px 20px 15px 20px;
+  padding: 15px 15px 15px 15px;
   cursor: pointer;
   outline: none;
+  margin: 0px 0px 10px 0px;
 }
 
 .game-route-light-hover:hover {
-  padding: 8px;
+  padding: 5px 5px 5px 5px;
   border: 2px solid #c9c9c9;
   border-radius: 10px;
   box-shadow: 0px 8px 50px rgba(7, 7, 7, 0.3) !important;
 }
 
 .game-route-dark-hover:hover {
-  padding: 8px;
+  padding: 5px 5px 5px 5px;
   border: 2px solid #383838;
   border-radius: 10px;
   box-shadow: 0px 8px 50px rgba(252, 249, 249, 0.17) !important;

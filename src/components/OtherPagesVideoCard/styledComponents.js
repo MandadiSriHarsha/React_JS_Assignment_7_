@@ -55,6 +55,7 @@ export const TrendingVideoTitle = styled.p`
   font-family: 'Roboto';
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 10px 0px;
+  word-wrap: break-word;
   color: ${props => (props.isDarkModeEnabled ? '#f1f1f1' : '#424242')};
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -69,6 +70,7 @@ export const TrendingChannelNameOne = styled.p`
   margin: 0px 0px 0px 0px;
   display: none;
   font-family: 'Roboto';
+  word-wrap: break-word;
   @media screen and (min-width: 576px) {
     display: flex;
     font-size: 16px;
@@ -80,6 +82,7 @@ export const TrendingChannelNameTwo = styled.p`
   color: ${props => (props.isDarkModeEnabled ? '#94a3b8' : '#64748b')};
   text-align: left;
   font-family: 'Roboto';
+  word-wrap: break-word;
   padding: 0px 10px 0px 0px;
   margin: 0px 0px 0px 0px;
   @media screen and (min-width: 576px) {
@@ -92,6 +95,7 @@ export const TrendingVideoExtraDetailsCard = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   font-size: 14px;
   color: ${props => (props.isDarkModeEnabled ? '#94a3b8' : '#64748b')};
   padding: 0px 0px 0px 0px;

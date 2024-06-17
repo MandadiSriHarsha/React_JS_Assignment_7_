@@ -10,11 +10,11 @@ export const Sidebar = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 15px 20px 15px;
+  border-bottom: 7px solid #ff0000;
+  padding: 0px 0px 0px 0px;
   background-color: ${props =>
     props.isDarkModeEnabled ? ' #212121' : '#ffffff'};
   display: none;
-  border: none;
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -22,7 +22,8 @@ export const Sidebar = styled.nav`
 
 export const SidebarMenuCard = styled.ul`
   list-style-type: none;
-  padding: 0px 0px 0px 0px;
+  padding: 13px 15px 0px 15px;
+  margin: 0px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -333,6 +334,8 @@ export const SidebarContactUsCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0px 15px 5px 15px;
+  margin: 0px 0px 0px 0px;
 `
 
 export const SidebarContactUsHeading = styled.p`

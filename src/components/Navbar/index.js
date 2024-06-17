@@ -48,7 +48,7 @@ class Navbar extends Component {
   onClickLogout = () => {
     const {history} = this.props
     Cookies.remove('jwt_token')
-    history.replace('/login')
+    history.push('/login')
   }
 
   render() {
@@ -94,7 +94,6 @@ class Navbar extends Component {
                       <FiMenu />
                     </MobileNavbarMenuButton>
                     <Popup
-                      modal
                       trigger={
                         <MobileNavbarLogoutButton
                           type="button"
@@ -103,6 +102,7 @@ class Navbar extends Component {
                           <FiLogOut />
                         </MobileNavbarLogoutButton>
                       }
+                      modal
                     >
                       {close => (
                         <PopupContentCard isDarkModeEnabled={isDarkModeEnabled}>

@@ -48,7 +48,7 @@ export const TrendingPageLogoCard = styled.div`
   background-color: ${props =>
     props.isDarkModeEnabled ? '#000000' : '#f8fafc'};
   border-radius: 100%;
-  padding: 9px 13px 7px 13px;
+  padding: 10px 13px 5px 13px;
   margin: 0px 15px 0px 0px;
   border: 2px solid #ff0000;
   @media screen and (min-width: 768px) {
@@ -72,7 +72,7 @@ export const TrendingPageVideosListCard = styled.ul`
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  padding: 20px 0px 0px 0px;
+  padding: 30px 0px 30px 0px;
   margin: 0px 0px 0px 0px;
   display: flex;
   flex-direction: column;

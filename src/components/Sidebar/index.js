@@ -282,6 +282,7 @@ const AppSidebar = props => {
                   href="https://www.facebook.com"
                   target="_blank"
                   style={{textDecoration: 'none'}}
+                  aria-label="Facebook"
                 >
                   <SidebarImage
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-facebook-logo-img.png"
@@ -294,6 +295,7 @@ const AppSidebar = props => {
                   href="https://www.twitter.com"
                   target="_blank"
                   style={{textDecoration: 'none'}}
+                  aria-label="Twitter"
                 >
                   <SidebarImage
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-twitter-logo-img.png"
@@ -306,6 +308,7 @@ const AppSidebar = props => {
                   href="https://www.linkedin.com"
                   target="_blank"
                   style={{textDecoration: 'none'}}
+                  aria-label="LinkedIn"
                 >
                   <SidebarImage
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-linked-in-logo-img.png"
@@ -316,7 +319,7 @@ const AppSidebar = props => {
               <SidebarContactUsDescription
                 isDarkModeEnabled={isDarkModeEnabled}
               >
-                Enjoy! Now to see your channels and recommendations!
+                Subscribe now to see your channels and recommendations!
               </SidebarContactUsDescription>
             </SidebarContactUsCard>
           </Sidebar>

@@ -7,6 +7,7 @@ import {GoPrimitiveDot} from 'react-icons/go'
 import NxtWatchAppContext from '../../context/NxtWatchAppContext'
 
 import {
+  VideoCardLinkItem,
   VideoCardItem,
   VideoThumbnail,
   VideoCardDetailsCard,
@@ -32,11 +33,8 @@ const VideoCard = props => {
     <NxtWatchAppContext.Consumer>
       {value => {
         const {isDarkModeEnabled} = value
-        const hoverEffect = isDarkModeEnabled
-          ? 'dark-mode-hover-effect'
-          : 'light-mode-hover-effect'
         return (
-          <li className={`home-card-link-item ${hoverEffect}`}>
+          <VideoCardLinkItem isDarkModeEnabled={isDarkModeEnabled}>
             <Link
               to={`/videos/${data.id}`}
               style={{textDecoration: 'none'}}
@@ -67,7 +65,7 @@ const VideoCard = props => {
                 </VideoCardDetailsCard>
               </VideoCardItem>
             </Link>
-          </li>
+          </VideoCardLinkItem>
         )
       }}
     </NxtWatchAppContext.Consumer>

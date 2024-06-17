@@ -26,7 +26,7 @@ class NotFoundRoute extends Component {
 
   navigateToHome = () => {
     const {history} = this.props
-    history.replace('/')
+    history.push('/')
   }
 
   render() {

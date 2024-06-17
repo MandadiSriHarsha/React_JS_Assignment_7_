@@ -9,19 +9,10 @@ export const NxtWatchPremiumCardBgContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border: 2px solid #ff4444;
   @media screen and (max-width: 767px) {
     border-top: none;
-    border-left: none;
-    border-right: none;
   }
-  border-bottom: ${props =>
-    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
-  border-left: ${props =>
-    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
-  border-top: ${props =>
-    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
-  border-right: ${props =>
-    props.isDarkModeEnabled ? '2px solid #f4f4f4' : '1px solid #212121'};
 `
 
 export const NxtWatchPremiumCardHeaderCard = styled.div`
